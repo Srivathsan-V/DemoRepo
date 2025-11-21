@@ -35,3 +35,7 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           echo date -u +"%Y-%m-%dT%H:%M:%SZ"
+      - name: Generate timestamp
+        run: |
+         echo "BUILD_TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")" >> $GITHUB_ENV
+         echo "Timestamp: $BUILD_TIMESTAMP"
